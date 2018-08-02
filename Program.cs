@@ -8,7 +8,7 @@ namespace foobar
         {
             Foobar foo = new Foobar();
             Processor processor = new Processor();
-            processor.Process(foo);
+            processor.Process(ref foo).Process(ref foo) ;
             Console.WriteLine($"Foobar.Bar value = {foo.Bar}");
             Console.ReadKey();
         }
@@ -19,8 +19,9 @@ namespace foobar
     }
 
     class Processor {
-        public void Process(Foobar foo) {
+        public void Process(ref Foobar foo) {
             foo.Bar = "some text";
         }
+    
     }
 }
