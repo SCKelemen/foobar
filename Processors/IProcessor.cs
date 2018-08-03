@@ -2,8 +2,8 @@ using System;
 
 namespace Processors {
 
-    public interface IProcessor
+    public interface IProcessor<T>
     {
-        void Process(T item);
+        void Process(ref T item);
     }
 }

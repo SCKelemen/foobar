@@ -8,7 +8,7 @@ namespace foobar
         {
             Foobar foo = new Foobar();
             Processor processor = new Processor();
-            processor.Process(ref foo).Process(ref foo) ;
+            processor.Process(ref foo);
             Console.WriteLine($"Foobar.Bar value = {foo.Bar}");
             Console.ReadKey();
         }
@@ -24,4 +24,16 @@ namespace foobar
         }
     
     }
+
+    class SomeBuilder {
+
+    }
+
+    interface Entry {
+        Entry Entry ();
+
+    }
+
+    
+
 }
